@@ -19,9 +19,15 @@ def populate():
   """)
 
   cursor.execute("INSERT INTO vehicles (model, year) VALUES (?,?)", ("Ford", 1979))
-
   cursor.execute("INSERT INTO vehicles (model, year) VALUES (?,?)", ("", None))
+  cursor.execute("INSERT INTO vehicles (model, year) VALUES (?,?)", ("Toyota", 2001))
+  cursor.execute("INSERT INTO vehicles (model, year) VALUES (?,?)", ("Ferrari", None))
+  cursor.execute("INSERT INTO vehicles (model, year) VALUES (?,?)", ("Dodge", 2010))
   
+  
+
+
+
   conn.commit()
   conn.close()
 

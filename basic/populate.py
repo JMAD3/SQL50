@@ -1,6 +1,7 @@
 import sqlite3
 
 def main():
+  populate()
   printTables()
     
 
@@ -16,13 +17,13 @@ def populate():
         year INTEGER
       )
   """)
-  conn.commit()
 
   cursor.execute("INSERT INTO vehicles (model, year) VALUES (?,?)", ("Ford", 1979))
-  conn.commit()
 
   cursor.execute("INSERT INTO vehicles (model, year) VALUES (?,?)", ("", None))
+  
   conn.commit()
+  conn.close()
 
 def printTables():
 
